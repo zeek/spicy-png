@@ -6,11 +6,11 @@
 #unset_field	-
 #path	files
 #open XXXX-XX-XX-XX-XX-XX
-#fields	fuid	source	depth	analyzers	mime_type	filename	total_bytes
-#types	string	string	count	set[string]	string	string	count
+#fields	source	depth	analyzers	mime_type	filename	total_bytes
+#types	string	count	set[string]	string	string	count
 #close XXXX-XX-XX-XX-XX-XX
-XXXXXXXXXXXXXXXXX	HTTP	0	(empty)	image/gif	-	94
-XXXXXXXXXXXXXXXXX	HTTP	0	(empty)	text/plain	-	-
-XXXXXXXXXXXXXXXXX	HTTP	0	(empty)	text/plain	-	-
-XXXXXXXXXXXXXXXXX	HTTP	0	SPICY_PNG	image/png	-	2349
-XXXXXXXXXXXXXXXXX	HTTP	0	SPICY_PNG	image/png	-	27579
+HTTP	0	(empty)	image/gif	-	94
+HTTP	0	(empty)	text/plain	-	-
+HTTP	0	(empty)	text/plain	-	-
+HTTP	0	SPICY_PNG	image/png	-	2349
+HTTP	0	SPICY_PNG	image/png	-	27579
