@@ -19,7 +19,7 @@ type Chunk = unit(inout top: PNG::File) {
         b"iTXt" -> itxt: iTXt(self.length);
         b"tEXt" -> text: tEXt(self.length);
         b"zTXt" -> ztzt: zTXt(self.length);
-        b"IEND" -> iend: bytes &size=self.length; # should have length 0
+        b"IEND" -> : void &requires=(self.length == 0);
         b"IDAT" -> : bytes &size=self.length; # image data
         b"hIST" -> frequency: uint16[self.length / 2];
         b"cHRM" -> chrm: cHRM;
