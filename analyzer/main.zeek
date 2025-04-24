@@ -1,6 +1,13 @@
 module PNG;
 
 export {
+	## Maximum chunk size we attempt to parse; chunks exceeding the limit will
+	## be rejected with a parse error.
+	##
+	## While setting this to a bigger value will allow parsing of more files,
+	## it can also lead to increased memory usage as parsed files are held in
+	## memory.
+	const max_chunk_size = 1024 * 1024 * 128 &redef; # 128 MiB.
 
 	redef enum Log::ID += { LOG };
 
