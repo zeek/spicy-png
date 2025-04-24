@@ -9,7 +9,9 @@ public type File = unit {
 };
 
 type Chunk = unit(inout top: PNG::File) {
-    length: uint32 &requires=($$ <= 2**31);
+    var max_chunk_size: uint64 = 2**31;
+
+    length: uint32 &requires=($$ <= self.max_chunk_size);
     chunk_type: bytes &size=4;
     switch (self.chunk_type) {
         b"IHDR" -> ihdr: IHDR(top);
