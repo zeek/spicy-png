@@ -20,4 +20,9 @@ repos:
   - id: cmake-format
   - id: cmake-lint
 
+- repo: https://github.com/bbannier/spicy-format
+  rev: v0.24.2
+  hooks:
+  - id: spicy-format
+
 exclude: '^tests/Baseline'
