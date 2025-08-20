@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v5.0.0
+  rev: v6.0.0
   hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
@@ -21,7 +21,7 @@ repos:
   - id: cmake-lint
 
 - repo: https://github.com/bbannier/spicy-format
-  rev: v0.24.2
+  rev: v0.26.0
   hooks:
   - id: spicy-format
 
