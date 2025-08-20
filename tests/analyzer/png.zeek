@@ -1,7 +1,7 @@
 # @TEST-EXEC: zeek -r ${TRACES}/png.pcap %INPUT
 # @TEST-EXEC: zeek -NN > zeek
-# @TEST-EXEC: zeek-cut -C source depth analyzers mime_type filename total_bytes <files.log >files.log2 && mv files.log2 files.log
-# @TEST-EXEC: zeek-cut -nC id <png.log >png.log2 && mv png.log2 png.log
+# @TEST-EXEC: zeek-cut -m source depth analyzers mime_type filename total_bytes <files.log >files.log2 && mv files.log2 files.log
+# @TEST-EXEC: zeek-cut -nm id <png.log >png.log2 && mv png.log2 png.log
 # @TEST-EXEC: btest-diff files.log
 # @TEST-EXEC: btest-diff png.log
 #
